@@ -1,0 +1,160 @@
+*, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    background-color: #F5EBEB;
+}
+
+.button {
+    border: none;
+    padding: .625em;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.button:hover {
+    filter: brightness(.9);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.person-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 1.5em auto 1em;
+    max-width: 40em;
+}
+
+.person-selector-button {
+    width: 100%;
+    background: #704F4F;
+    opacity: .6;
+    color: #F5EBEB;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: .7px;
+}
+
+.active-person {
+    opacity: 1;
+    font-weight: 700;
+}
+
+.chat-container {
+    background-color: #D5B4B4;
+    border-radius: .5em;
+    padding: .75em 1.25em;
+    margin: auto;
+    max-width: 40em;
+    height: 31.5em;
+    box-shadow: 0 0 1.2em 0.5em #301e1e36;
+}
+
+.chat-header {
+    margin-bottom: .5em;
+    color: #482121;
+    font-weight: 700;
+}
+
+.chat-messages {
+    height: 18em;
+    overflow-y: scroll;
+}
+
+.chat-messages::-webkit-scrollbar {
+    display: none;
+}
+
+.message {
+    padding: .625em;
+    border-radius: 1em;
+    margin-bottom: .625em;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-sender {
+    font-weight: 600;
+    margin-bottom: .3em;
+    color: #482121;
+}
+
+.message-text {
+    font-size: 1em;
+    margin-bottom: .3em;
+    word-wrap: break-word;
+    color: #472D2D;
+}
+
+.message-timestamp {
+    font-size: .75em;
+    font-weight: 300;
+    letter-spacing: .9px;
+    text-align: right;
+}
+
+.darker-bg {
+    background-color: #A77979;
+}
+
+.lighter-bg {
+    background-color: #E4D0D0;
+}
+
+.darker-bg .message-timestamp {
+    color: #E4D0D0 ;
+}
+
+.lighter-bg .message-timestamp {
+    color: #704F4F;
+}
+
+/* .message.lighter-bg {
+    border-bottom-right-radius: 0;
+}
+
+.message.darker-bg {
+    border-top-left-radius: 0;
+} */
+
+.chat-input-form {
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+    gap: .625em;
+}
+
+.chat-input {
+    padding: 0.625em;
+    border: none;
+    border-radius: .5em;
+    background-color: #F5EBEB;
+    color: #867070;
+    font-size: 1em;
+    flex-grow: 1;
+}
+
+.chat-input:focus {
+    outline: solid 2px #704F4F;
+}
+
+.send-button {
+    background-color: #A77979;
+    color: #482121;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.clear-chat-button {
+    display: block;
+    margin: 1.7em auto;
+    color: #482121;
+    font-weight: 600;
+}
