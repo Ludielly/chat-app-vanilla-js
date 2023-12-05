@@ -7,33 +7,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Chat App</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <div class="person-selector">
-        <button class="button person-selector-button active-person" id="johnSelector">John</button>
+        <button class="button person-selector-button active-person" id="johnSelector" disabled>John</button>
         <button class="button person-selector-button" id="janeSelector">Jane</button>
     </div>
     <div class="chat-container">
-        <h2 class="chat-header">John chatting...</h2>
+        <div class="chat-header">
+            <h2 class="chat-header-title">John está digitando...</h2>
+            <!-- <button class="button clear-chat-button">Limpar chat</button> -->
+            <button class="button clear-chat-button clear-chat-button-icon" title="Limpar chat">
+                <img src="./assets/img/delete.svg" alt="Limpar chat" width="20px" height="20px">
+            </button>
+        </div>
         <div class="chat-messages">
-            <div class="message darker-bg">
+            <div class="message john-message lighter-bg">
                 <div class="message-sender">John</div>
-                <div class="message-text">Hey Jane, what's up?</div>
-                <div class="message-timestamp">10:30AM</div>
+                <div class="message-text">oi jane, tudo bem?</div>
+                <div class="message-timestamp">10:30</div>
             </div>
-            <div class="message lighter-bg">
+            <div class="message jane-message darker-bg">
                 <div class="message-sender">Jane</div>
-                <div class="message-text">Not much, just living the dream. How about you?</div>
-                <div class="message-timestamp">10:35AM</div>
+                <div class="message-text">Oii John, tudo certo e ai?</div>
+                <div class="message-timestamp">10:35</div>
             </div>
         </div>
         <form class="chat-input-form">
-            <input type="text" class="chat-input" required placeholder="Type here, John...">
-            <button type="submit" class="button send-button">Send</button>
+            <input type="text" class="chat-input" required placeholder="Mensagem">
+            <button type="submit" class="button send-button">Enviar</button>
         </form>
-        <button class="button clear-chat-button">Clear Chat</button>
     </div>
-    <script src="./app.js"></script>
+    <script src="./assets/js/app.js"></script>
 </body>
 </html>
